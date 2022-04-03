@@ -1,0 +1,51 @@
+minikube start
+
+kubectl get pods
+
+kubectl create -f deploy.yml
+
+kubectl get pods
+
+kubectl describe deploy
+
+kubectl create -f service.yml
+
+kubectl describe svc
+
+Endpoints : 192.168.99.100:30001
+
+http://192.168.99.100:30001/grid/console
+
+kubectl create -f rep.yml
+
+kubectl get pods
+
+Remote URL : http://192.168.99.100:30001/wd/hub
+
+If i changed the version or any other changes made in deploy.yml File should use below commands for 
+
+recently changed details will apply
+
+rollout update in deployment
+
+kubectl apply -f deploy.yml
+
+(or) kubectl apply -f deploy.yml --record
+
+Status of deployment
+
+kubectl rollout status deployment selenium-hub
+
+History of deployment
+
+kubectl rollout history deployment selenium-hub
+
+undo the changes
+
+kubectl rollout undo deployment selenium-hub --to-revision=2 (goes to 2 previews version configuration)
+
+
+
+
+
+
